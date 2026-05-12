@@ -1,0 +1,9 @@
+{
+  "name": "live-sync-performance-app",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --parallel -r dev",
+    "build": "pnpm --filter server run build && pnpm --filter client run build",
+    "start": "pnpm --filter server run start"
+  }
+}

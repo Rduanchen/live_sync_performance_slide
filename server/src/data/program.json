@@ -1,0 +1,131 @@
+[
+  {
+    "id": "OPEN",
+    "type": "message",
+    "title": "開幕致詞",
+    "message": "歡迎各位來到雀兒輕音社期末公演！社長致詞與今晚活動說明。"
+  },
+  {
+    "id": "P1",
+    "type": "performance",
+    "title": "第一首：溫柔",
+    "slideURL": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80",
+    "groupName": "烏克麗麗大合奏",
+    "message": "輕快柔和的烏克麗麗，帶領大家進入今晚的音樂饗宴。",
+    "members": [
+      {
+        "name": "小美",
+        "imgUrl": "https://i.pravatar.cc/150?img=1",
+        "ig": "https://instagram.com"
+      },
+      {
+        "name": "阿宏",
+        "imgUrl": "https://i.pravatar.cc/150?img=11",
+        "ig": "https://instagram.com"
+      }
+    ]
+  },
+  {
+    "id": "P2",
+    "type": "performance",
+    "title": "第二首：那些年",
+    "slideURL": "https://images.unsplash.com/photo-1605340406960-f5b496c38b3d?auto=format&fit=crop&w=800&q=80",
+    "groupName": "口琴獨奏",
+    "message": "那些年錯過的大雨，由清脆的口琴聲娓娓道來。",
+    "members": [
+      {
+        "name": "小明",
+        "imgUrl": "https://i.pravatar.cc/150?img=15",
+        "ig": "https://instagram.com"
+      }
+    ]
+  },
+  {
+    "id": "P3",
+    "type": "performance",
+    "title": "第三首：告白氣球",
+    "slideURL": "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&w=800&q=80",
+    "groupName": "烏克麗麗與木箱鼓",
+    "message": "節奏感十足的木箱鼓，搭配甜蜜的烏克麗麗和弦！",
+    "members": [
+      {
+        "name": "阿華",
+        "imgUrl": "https://i.pravatar.cc/150?img=33",
+        "ig": "https://instagram.com"
+      },
+      {
+        "name": "小豬",
+        "imgUrl": "https://i.pravatar.cc/150?img=14",
+        "ig": "https://instagram.com"
+      }
+    ]
+  },
+  {
+    "id": "DRAW1",
+    "type": "message",
+    "title": "中場抽獎 (第一波)",
+    "message": "準備好手邊的票根，我們即將抽出三名幸運兒送出精美社團周邊！"
+  },
+  {
+    "id": "P4",
+    "type": "performance",
+    "title": "第四首：晴天",
+    "slideURL": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80",
+    "groupName": "木箱鼓與吉他節奏",
+    "message": "故事的小黃花，從出生那年就飄著~",
+    "members": [
+      {
+        "name": "志明",
+        "imgUrl": "https://i.pravatar.cc/150?img=59",
+        "ig": "https://instagram.com"
+      }
+    ]
+  },
+  {
+    "id": "LOVE",
+    "type": "message",
+    "title": "特別活動：告白環節",
+    "message": "要不要和我\"雀\"認關係？現在是說出心意的時刻！台下的你有什麼話想對那個人說嗎？"
+  },
+  {
+    "id": "P5",
+    "type": "performance",
+    "title": "第五首：小幸運",
+    "slideURL": "https://images.unsplash.com/photo-1499364615650-ec38552f4f34?auto=format&fit=crop&w=800&q=80",
+    "groupName": "女子重唱與烏克麗麗",
+    "message": "與你相遇好幸運，獻給剛剛被告白或告白成功的你們！",
+    "members": [
+      {
+        "name": "莉莉",
+        "imgUrl": "https://i.pravatar.cc/150?img=47",
+        "ig": "https://instagram.com"
+      },
+      {
+        "name": "小櫻",
+        "imgUrl": "https://i.pravatar.cc/150?img=44",
+        "ig": "https://instagram.com"
+      }
+    ]
+  },
+  {
+    "id": "DRAW2",
+    "type": "message",
+    "title": "壓軸抽獎 (第二波)",
+    "message": "終極大獎即將揭曉，今晚的最大獎會獎落誰家呢？"
+  },
+  {
+    "id": "P6",
+    "type": "performance",
+    "title": "安可曲：乾杯",
+    "slideURL": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=800&q=80",
+    "groupName": "全體大合唱",
+    "message": "讓我們舉起手中的飲料，為了今晚的完美演出乾杯！",
+    "members": [
+      {
+        "name": "社長 凱文",
+        "imgUrl": "https://i.pravatar.cc/150?img=68",
+        "ig": "https://instagram.com"
+      }
+    ]
+  }
+]
