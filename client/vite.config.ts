@@ -45,6 +45,24 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ["**/*.{js,css,html,ico,png,svg}"],
+        runtimeCaching: [
+          {
+            urlPattern: ({ url, request }) =>
+              request.destination === "image" &&
+              /^\/images\/\d+\.png$/.test(url.pathname) &&
+              url.searchParams.has("v"),
+            handler: "CacheFirst",
+            options: {
+              cacheName: "ciao-program-posters",
+              cacheableResponse: { statuses: [200] },
+              expiration: {
+                maxEntries: 36,
+                maxAgeSeconds: 7 * 24 * 60 * 60,
+                purgeOnQuotaError: true,
+              },
+            },
+          },
+        ],
       },
     }),
   ],

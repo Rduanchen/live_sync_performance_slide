@@ -96,7 +96,9 @@
           </div>
 
           <img
-            :src="getImgUrl('/images/1.png')"
+            v-if="coverPoster"
+            crossorigin="anonymous"
+            :src="coverPoster"
             alt="別為青春雀步公演插畫海報"
             class="poster landing-poster"
             width="1067"
@@ -118,13 +120,16 @@
           </h2>
           <div class="program-layout">
             <a
-              :href="getImgUrl('/images/2.png')"
+              v-if="schedulePoster"
+              :href="schedulePoster"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="開啟原尺寸曲序表"
             >
               <img
-                :src="getImgUrl('/images/2.png')"
+                crossorigin="anonymous"
+                :src="schedulePoster"
+                fetchpriority="high"
                 alt="公演曲序表圖檔"
                 class="poster"
                 width="1067"
@@ -269,7 +274,9 @@
                     :aria-label="'開啟原圖：' + item.title"
                   >
                     <img
+                      crossorigin="anonymous"
                       :src="getImgUrl(item.slideURL)"
+                      :fetchpriority="index === carouselIndex ? 'high' : 'auto'"
                       :alt="item.title + '圖卡'"
                       class="poster"
                       width="1067"
@@ -386,6 +393,7 @@
 
 <script setup lang="ts">
 import { computed, onMounted, onUnmounted, ref, watch } from "vue";
+import { preloadPosters } from "../composables/preloadPosters";
 import { useSocket } from "../composables/useSocket";
 import type { ProgramSlide } from "../types/program";
 
@@ -394,6 +402,7 @@ const tab = ref("landing");
 const program = ref<ProgramSlide[]>([]);
 const carouselIndex = ref(0);
 const loadError = ref("");
+const posterRequests = new AbortController();
 let wakeLock: WakeLockSentinel | null = null;
 let wakeLockPending = false;
 let mounted = false;
@@ -415,12 +424,31 @@ const feedbackURL = computed(() =>
 
 const getImgUrl = (url: string) => (url.startsWith("/") ? API_URL + url : url);
 
+const getProgramPoster = (type: "cover" | "schedule", fallback: string) => {
+  if (!program.value.length && !loadError.value) return undefined;
+  const url = program.value.find((item) => item.type === type)?.slideURL;
+  return getImgUrl(url ?? fallback);
+};
+
+const coverPoster = computed(() => getProgramPoster("cover", "/images/1.png"));
+const schedulePoster = computed(() => getProgramPoster("schedule", "/images/2.png"));
+
 const fetchProgram = async () => {
   try {
-    const res = await fetch(`${API_URL}/api/program`);
+    const res = await fetch(`${API_URL}/api/program`, {
+      signal: posterRequests.signal,
+    });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     program.value = await res.json();
+    const first = [coverPoster.value, schedulePoster.value].filter(
+      (url): url is string => url !== undefined,
+    );
+    const posters = program.value.flatMap((item) =>
+      item.slideURL ? [getImgUrl(item.slideURL)] : [],
+    );
+    void preloadPosters(first, posters, posterRequests.signal);
   } catch (error) {
+    if (posterRequests.signal.aborted) return;
     loadError.value = "暫時無法載入節目資訊，請重新整理頁面。";
     console.error("Error fetching program:", error);
   }
@@ -500,6 +528,7 @@ onMounted(() => {
 
 onUnmounted(() => {
   mounted = false;
+  posterRequests.abort();
   disconnect();
   void updateWakeLock();
   document.removeEventListener("visibilitychange", updateWakeLock);
