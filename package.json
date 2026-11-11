@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "pnpm --parallel -r dev",
     "build": "pnpm --filter server run build && pnpm --filter client run build",
-    "start": "pnpm --filter server run start"
+    "start": "pnpm --filter server run start",
+    "deploy": "pnpm run build && pnpm run start"
   }
 }
