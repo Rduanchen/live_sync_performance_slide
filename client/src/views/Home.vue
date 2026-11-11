@@ -119,13 +119,7 @@
             節目表
           </h2>
           <div class="program-layout">
-            <a
-              v-if="schedulePoster"
-              :href="schedulePoster"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="開啟原尺寸曲序表"
-            >
+            <div v-if="schedulePoster" class="poster-frame">
               <img
                 crossorigin="anonymous"
                 :src="schedulePoster"
@@ -135,7 +129,7 @@
                 width="1067"
                 height="1535"
               />
-            </a>
+            </div>
 
             <div>
               <v-alert v-if="loadError" type="error" variant="tonal">{{
@@ -266,13 +260,7 @@
                   class="slide-layout"
                   :class="{ 'slide-layout--with-poster': item.slideURL }"
                 >
-                  <a
-                    v-if="item.slideURL"
-                    :href="getImgUrl(item.slideURL)"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    :aria-label="'開啟原圖：' + item.title"
-                  >
+                  <div v-if="item.slideURL" class="poster-frame">
                     <img
                       crossorigin="anonymous"
                       :src="getImgUrl(item.slideURL)"
@@ -282,7 +270,7 @@
                       width="1067"
                       height="1535"
                     />
-                  </a>
+                  </div>
 
                   <div class="slide-copy">
                     <div
@@ -636,8 +624,7 @@ onUnmounted(() => {
   gap: 20px;
 }
 
-.program-layout > a,
-.slide-layout > a {
+.poster-frame {
   display: block;
   width: min(100%, 420px);
   margin-inline: auto;
