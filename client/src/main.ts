@@ -16,10 +16,17 @@ const vuetify = createVuetify({
       dark: {
         dark: true,
         colors: {
-          background: '#121212',
-          surface: '#1e1e1e',
-          primary: '#bb86fc',
-          secondary: '#03dac6',
+          background: '#09090D',
+          'on-background': '#F6F5F2',
+          surface: '#192E50',
+          'on-surface': '#F6F5F2',
+          outline: '#45454B',
+          primary: '#FFD66B',
+          'on-primary': '#09090D',
+          secondary: '#FFD66B',
+          'on-secondary': '#09090D',
+          accent: '#762F35',
+          'on-accent': '#F6F5F2',
         }
       }
     }

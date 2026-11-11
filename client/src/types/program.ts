@@ -1,15 +1,18 @@
 export type Member = {
-  name: string;
-  imgUrl: string;
-  ig: string;
+  name?: string;
+  role?: string;
+  imgUrl?: string;
+  ig?: string;
 }
 
 export type ProgramSlide = {
   id: string;
-  type: 'performance' | 'message';
+  type: 'cover' | 'schedule' | 'performance' | 'message' | 'sponsors' | 'feedback';
   title: string;
   slideURL?: string;
   groupName?: string;
-  message: string;
+  message?: string;
   members?: Member[];
+  sponsors?: string[];
+  feedbackURL?: string;
 }

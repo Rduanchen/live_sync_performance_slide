@@ -79,7 +79,7 @@ import { useRouter } from 'vue-router'
 import { useSocket } from '../composables/useSocket'
 import type { ProgramSlide } from '../types/program'
 
-const SOCKET_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000'
+const API_URL = import.meta.env.VITE_API_URL || ''
 const router = useRouter()
 const { connect, disconnect, currentId, sendAdminUpdate } = useSocket()
 
@@ -98,7 +98,7 @@ const currentSlide = computed(() => {
 
 const fetchProgram = async () => {
   try {
-    const res = await fetch(`${SOCKET_URL}/api/program`)
+    const res = await fetch(`${API_URL}/api/program`)
     program.value = await res.json()
   } catch (e) {
     console.error('Error fetching program:', e)

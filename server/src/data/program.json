@@ -1,131 +1,328 @@
 [
   {
     "id": "OPEN",
-    "type": "message",
-    "title": "開幕致詞",
-    "message": "歡迎各位來到雀兒輕音社期末公演！社長致詞與今晚活動說明。"
+    "type": "cover",
+    "title": "別為青春雀步",
+    "slideURL": "/images/1.png",
+    "groupName": "CIAO 期中公演",
+    "message": "18:30～21:00・一大川堂"
+  },
+  {
+    "id": "SCHEDULE",
+    "type": "schedule",
+    "title": "曲序表",
+    "slideURL": "/images/2.png"
   },
   {
     "id": "P1",
     "type": "performance",
-    "title": "第一首：溫柔",
-    "slideURL": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80",
-    "groupName": "烏克麗麗大合奏",
-    "message": "輕快柔和的烏克麗麗，帶領大家進入今晚的音樂饗宴。",
+    "title": "一樣的月光",
+    "slideURL": "/images/3.png",
     "members": [
       {
-        "name": "小美",
-        "imgUrl": "https://i.pravatar.cc/150?img=1",
-        "ig": "https://instagram.com"
+        "name": "阿芳",
+        "role": "烏克手",
+        "ig": "https://www.instagram.com/to0_0or"
       },
       {
-        "name": "阿宏",
-        "imgUrl": "https://i.pravatar.cc/150?img=11",
-        "ig": "https://instagram.com"
+        "name": "阿倫",
+        "role": "鼓手",
+        "ig": "https://www.instagram.com/lun_960603"
+      },
+      {
+        "name": "榴槤",
+        "role": "主唱",
+        "ig": "https://www.instagram.com/lian.fln__v7"
+      },
+      {
+        "name": "阿端",
+        "role": "口琴手",
+        "ig": "https://www.instagram.com/youduan4045"
+      },
+      {
+        "name": "阿鈿",
+        "role": "烏克手",
+        "ig": "https://www.instagram.com/wengdian_08.02"
       }
     ]
   },
   {
     "id": "P2",
     "type": "performance",
-    "title": "第二首：那些年",
-    "slideURL": "https://images.unsplash.com/photo-1605340406960-f5b496c38b3d?auto=format&fit=crop&w=800&q=80",
-    "groupName": "口琴獨奏",
-    "message": "那些年錯過的大雨，由清脆的口琴聲娓娓道來。",
+    "title": "星星",
+    "slideURL": "/images/4.png",
+    "groupName": "特別嘉賓：台大烏克麗麗社",
     "members": [
       {
-        "name": "小明",
-        "imgUrl": "https://i.pravatar.cc/150?img=15",
-        "ig": "https://instagram.com"
+        "name": "小旻",
+        "role": "鋼琴手",
+        "ig": "https://www.instagram.com/siminzhen_0202"
+      },
+      {
+        "name": "小嚕",
+        "role": "鼓手",
+        "ig": "https://www.instagram.com/ssru01"
+      },
+      {
+        "name": "小鳴",
+        "role": "主唱",
+        "ig": "https://www.instagram.com/hsuorncy"
+      },
+      {
+        "name": "小麗",
+        "role": "主唱",
+        "ig": "https://www.instagram.com/joelin8278"
+      },
+      {
+        "name": "小克",
+        "role": "吉他手",
+        "ig": "https://www.instagram.com/shaochengj"
+      },
+      {
+        "name": "小貝",
+        "role": "貝斯手",
+        "ig": "https://www.instagram.com/hbx_0518"
+      },
+      {
+        "name": "小星",
+        "role": "烏克手",
+        "ig": "https://www.instagram.com/peggy_1217"
       }
     ]
   },
   {
     "id": "P3",
     "type": "performance",
-    "title": "第三首：告白氣球",
-    "slideURL": "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&w=800&q=80",
-    "groupName": "烏克麗麗與木箱鼓",
-    "message": "節奏感十足的木箱鼓，搭配甜蜜的烏克麗麗和弦！",
+    "title": "屋頂上的提琴手",
+    "slideURL": "/images/5.png",
     "members": [
       {
-        "name": "阿華",
-        "imgUrl": "https://i.pravatar.cc/150?img=33",
-        "ig": "https://instagram.com"
+        "name": "*0",
+        "role": "chord口琴"
       },
       {
-        "name": "小豬",
-        "imgUrl": "https://i.pravatar.cc/150?img=14",
-        "ig": "https://instagram.com"
+        "name": "+峰",
+        "role": "半音階口琴"
+      },
+      {
+        "name": "🚫余",
+        "role": "bass口琴"
+      },
+      {
+        "name": "lala",
+        "role": "半音階口琴"
       }
     ]
   },
   {
     "id": "DRAW1",
     "type": "message",
-    "title": "中場抽獎 (第一波)",
-    "message": "準備好手邊的票根，我們即將抽出三名幸運兒送出精美社團周邊！"
+    "title": "第一次抽獎",
+    "slideURL": "/images/6.png",
+    "groupName": "抽獎環節"
   },
   {
     "id": "P4",
     "type": "performance",
-    "title": "第四首：晴天",
-    "slideURL": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80",
-    "groupName": "木箱鼓與吉他節奏",
-    "message": "故事的小黃花，從出生那年就飄著~",
+    "title": "長成什麼樣子算愛情",
+    "slideURL": "/images/7.png",
     "members": [
       {
-        "name": "志明",
-        "imgUrl": "https://i.pravatar.cc/150?img=59",
-        "ig": "https://instagram.com"
+        "name": "布林哥",
+        "role": "貝斯手",
+        "ig": "https://www.instagram.com/z_y_0226"
+      },
+      {
+        "name": "布林卡哇",
+        "role": "電烏手",
+        "ig": "https://www.instagram.com/shon_tao"
+      },
+      {
+        "name": "角金魚",
+        "role": "主唱",
+        "ig": "https://www.instagram.com/five_05_05"
+      },
+      {
+        "name": "哥布林殺手",
+        "role": "吉他手",
+        "ig": "https://www.instagram.com/bmo_iri"
+      },
+      {
+        "role": "鼓手",
+        "ig": "https://www.instagram.com/yolo_lin1999"
       }
     ]
   },
   {
-    "id": "LOVE",
-    "type": "message",
-    "title": "特別活動：告白環節",
-    "message": "要不要和我\"雀\"認關係？現在是說出心意的時刻！台下的你有什麼話想對那個人說嗎？"
-  },
-  {
     "id": "P5",
     "type": "performance",
-    "title": "第五首：小幸運",
-    "slideURL": "https://images.unsplash.com/photo-1499364615650-ec38552f4f34?auto=format&fit=crop&w=800&q=80",
-    "groupName": "女子重唱與烏克麗麗",
-    "message": "與你相遇好幸運，獻給剛剛被告白或告白成功的你們！",
+    "title": "能遇見就很不錯了",
+    "slideURL": "/images/8.png",
     "members": [
       {
-        "name": "莉莉",
-        "imgUrl": "https://i.pravatar.cc/150?img=47",
-        "ig": "https://instagram.com"
+        "name": "宥端"
       },
       {
-        "name": "小櫻",
-        "imgUrl": "https://i.pravatar.cc/150?img=44",
-        "ig": "https://instagram.com"
+        "name": "承霖"
+      },
+      {
+        "name": "怡縵"
+      },
+      {
+        "name": "芳熏"
+      },
+      {
+        "name": "yolo_lin1999"
+      }
+    ]
+  },
+  {
+    "id": "BREAK",
+    "type": "message",
+    "title": "中場休息",
+    "slideURL": "/images/9.png",
+    "message": "這段時間可以去上廁所或是再爆吃一頓喔！"
+  },
+  {
+    "id": "P6",
+    "type": "performance",
+    "title": "BOULEVARD OF BROKEN DREAMS",
+    "slideURL": "/images/10.png",
+    "groupName": "特別嘉賓：台大烏克麗麗社",
+    "members": [
+      {
+        "name": "holiday"
+      },
+      {
+        "name": "Monday"
+      },
+      {
+        "name": "blue day"
+      },
+      {
+        "name": "yesterday"
+      },
+      {
+        "name": "Friday"
+      }
+    ]
+  },
+  {
+    "id": "P7",
+    "type": "performance",
+    "title": "帶你去旅行",
+    "slideURL": "/images/11.png",
+    "members": [
+      {
+        "name": "阿燁",
+        "role": "口琴手"
+      },
+      {
+        "name": "阿芳",
+        "role": "烏克手"
+      },
+      {
+        "name": "阿鏞",
+        "role": "吉他手"
+      },
+      {
+        "name": "阿綻",
+        "role": "貝斯手"
       }
     ]
   },
   {
     "id": "DRAW2",
     "type": "message",
-    "title": "壓軸抽獎 (第二波)",
-    "message": "終極大獎即將揭曉，今晚的最大獎會獎落誰家呢？"
+    "title": "第二次抽獎",
+    "slideURL": "/images/12.png",
+    "groupName": "抽獎環節"
   },
   {
-    "id": "P6",
+    "id": "P8",
     "type": "performance",
-    "title": "安可曲：乾杯",
-    "slideURL": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=800&q=80",
-    "groupName": "全體大合唱",
-    "message": "讓我們舉起手中的飲料，為了今晚的完美演出乾杯！",
+    "title": "COLD BLOODED",
+    "slideURL": "/images/13.png",
     "members": [
       {
-        "name": "社長 凱文",
-        "imgUrl": "https://i.pravatar.cc/150?img=68",
-        "ig": "https://instagram.com"
+        "name": "冷血小花",
+        "role": "主唱"
+      },
+      {
+        "name": "皮皮",
+        "role": "口琴手"
+      },
+      {
+        "name": "逃勒鄧",
+        "role": "吉他手"
       }
     ]
+  },
+  {
+    "id": "P9",
+    "type": "performance",
+    "title": "世界が終るまでは",
+    "slideURL": "/images/14.png",
+    "groupName": "台大烏克麗麗社",
+    "members": [
+      {
+        "name": "三井凹累",
+        "role": "鋼琴手",
+        "ig": "https://www.instagram.com/joelin8278"
+      },
+      {
+        "name": "流川清美",
+        "role": "主唱",
+        "ig": "https://www.instagram.com/czc_cycc22"
+      },
+      {
+        "name": "烏魚鴨子",
+        "role": "鼓手",
+        "ig": "https://www.instagram.com/peiqi_1208"
+      },
+      {
+        "name": "三井胖",
+        "role": "吉他手",
+        "ig": "https://www.instagram.com/shaochengj"
+      },
+      {
+        "name": "三井壽",
+        "role": "貝斯手",
+        "ig": "https://www.instagram.com/matthieuzajac"
+      },
+      {
+        "name": "赤木玲子",
+        "role": "烏克手",
+        "ig": "https://www.instagram.com/lingling0301"
+      }
+    ]
+  },
+  {
+    "id": "PHOTO",
+    "type": "message",
+    "title": "大合照",
+    "slideURL": "/images/15.png",
+    "message": "感謝大家前來參加！"
+  },
+  {
+    "id": "SPONSORS",
+    "type": "sponsors",
+    "title": "感謝贊助商",
+    "slideURL": "/images/16.png",
+    "sponsors": [
+      "岑林綠豆沙",
+      "米客居小吃店",
+      "喫上飲",
+      "醉醬麵大王",
+      "華美文具刻印店"
+    ]
+  },
+  {
+    "id": "FEEDBACK",
+    "type": "feedback",
+    "title": "回饋表單",
+    "message": "謝謝你來看 CIAO 期中公演！歡迎留下你的觀演心得或建議。",
+    "feedbackURL": "https://forms.gle/nFbRVwGSLHi32BiH8",
+    "optionalSlideURL": "/images/17.png"
   }
 ]

@@ -46,7 +46,7 @@
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 
-const SOCKET_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000'
+const API_URL = import.meta.env.VITE_API_URL || ''
 const router = useRouter()
 
 const password = ref('')
@@ -61,7 +61,7 @@ const handleLogin = async () => {
   errorMsg.value = ''
   
   try {
-    const res = await fetch(`${SOCKET_URL}/api/admin/login`, {
+    const res = await fetch(`${API_URL}/api/admin/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
