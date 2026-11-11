@@ -14,9 +14,15 @@
       <v-tab id="program-tab" value="program" aria-controls="program-panel"
         >節目表</v-tab
       >
-      <v-tab id="sync-tab" value="sync" aria-controls="sync-panel"
-        >現在演出</v-tab
-      >
+      <v-tab id="sync-tab" value="sync" aria-controls="sync-panel">
+        <v-icon
+          icon="mdi-broadcast"
+          class="live-icon"
+          size="24"
+          aria-hidden="true"
+        />
+        現在表演曲目
+      </v-tab>
     </v-tabs>
 
     <v-window v-model="tab" :touch="false" class="event-window flex-grow-1">
@@ -56,7 +62,7 @@
                 prepend-icon="mdi-broadcast"
                 @click="tab = 'sync'"
               >
-                即時節目資訊
+                看看現在表演到哪??
               </v-btn>
               <v-btn
                 color="primary"
@@ -406,8 +412,9 @@ const closingSlides = computed(() =>
     (item) => item.type === "sponsors" || item.type === "feedback",
   ),
 );
-const feedbackURL = computed(() =>
-  closingSlides.value.find((item) => item.type === "feedback")?.feedbackURL,
+const feedbackURL = computed(
+  () =>
+    closingSlides.value.find((item) => item.type === "feedback")?.feedbackURL,
 );
 
 const getImgUrl = (url: string) => (url.startsWith("/") ? API_URL + url : url);
@@ -419,7 +426,9 @@ const getProgramPoster = (type: "cover" | "schedule", fallback: string) => {
 };
 
 const coverPoster = computed(() => getProgramPoster("cover", "/images/1.png"));
-const schedulePoster = computed(() => getProgramPoster("schedule", "/images/2.png"));
+const schedulePoster = computed(() =>
+  getProgramPoster("schedule", "/images/2.png"),
+);
 
 const fetchProgram = async () => {
   try {
@@ -539,6 +548,30 @@ onUnmounted(() => {
 
 .event-window {
   overflow: clip;
+}
+
+.live-icon {
+  margin-inline-end: 8px;
+  color: #ff3b5c;
+  opacity: 1;
+  filter: drop-shadow(0 0 4px rgb(255 59 92 / 45%));
+  animation: live-bounce 1.8s ease-in-out infinite;
+}
+
+@keyframes live-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .live-icon {
+    animation: none;
+  }
 }
 
 .page-content {
