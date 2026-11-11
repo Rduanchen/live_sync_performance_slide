@@ -1,6 +1,10 @@
 {
   "name": "live-sync-performance-app",
   "private": true,
+  "packageManager": "pnpm@10.33.4",
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "dev": "pnpm --parallel -r dev",
     "build": "pnpm --filter server run build && pnpm --filter client run build",

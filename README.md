@@ -219,6 +219,28 @@ images/
 
 使用 HTTPS 網域時，將 HTTP 請求代理到後端，並為 `/socket.io/` 提供 WebSocket 連線升級支援。
 
+### Railway 單一服務部署
+
+本專案的前端與後端共用一個 Railway 服務。Express 提供 `client/dist/` 頁面、`/assets/` 前端資源、`/images/` 圖卡、`/api/` 和 `/socket.io/`，瀏覽器透過同一個公開網址使用全部功能。
+
+Railway 匯入 JavaScript monorepo 時，會為可部署套件自動建立服務。本專案根目錄的 `railway.json` 指定從根目錄建置並啟動 Express，設定於每個選用該檔案的服務生效。匯入時選取一個服務即可完成這種部署。[Railway monorepo 說明](https://docs.railway.com/deployments/monorepo)
+
+在選定服務的 Settings 設定以下欄位。
+
+| 欄位 | 設定 |
+| --- | --- |
+| Root Directory | `/`，使用整個儲存庫 |
+| Railway Config File | `/railway.json` |
+| Build Command | `pnpm run build`，由設定檔提供 |
+| Start Command | `pnpm run start`，由設定檔提供 |
+| Watch Paths | 清空套件專屬限制，讓前端、後端及圖片更新都能觸發部署 |
+
+在 Variables 設定 `ADMIN_PASSWORD`。保留 Railway 提供的 `PORT`，讓前端使用預設同源連線。若曾設定 `VITE_API_URL` 指向另一個服務，請移除該變數再重新部署。
+
+部署成功後，在 Networking 產生公開網域，首頁使用該網域，管理登入使用同一網域的 `/admin-login`。已有兩個服務時，先完成選定服務的上述設定並驗證網站，再處理多餘服務。
+
+根目錄的 `packageManager` 固定 pnpm 版本，`engines.node` 指定 Node.js 22。Railway 分別執行建置與啟動階段，`pnpm run deploy` 可供自行管理主機時使用。[Railway 設定檔說明](https://docs.railway.com/config-as-code)
+
 ### 環境變數
 
 | 位置 | 變數 | 預設與用途 |
